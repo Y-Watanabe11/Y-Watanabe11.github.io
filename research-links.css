@@ -1,0 +1,42 @@
+/* Homepage research-to-detail links. Scoped to card content. */
+.research-card .card-content { min-height: 346px; }
+.research-card-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  margin-top: 21px;
+  padding: 12px 2px 0;
+  border-top: 1px solid #e3e8ec;
+  color: #307378;
+  font: 700 12px/1.5 "Space Grotesk", system-ui, sans-serif;
+  letter-spacing: -.02em;
+  transition: color .2s ease;
+}
+.research-card-link span:last-child {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #c8d8de;
+  border-radius: 50%;
+  font-size: 17px;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+.research-card-link:hover { color: #14585b; }
+.research-card-link:hover span:last-child {
+  transform: translate(2px, -2px);
+  background: #e7f5f3;
+  border-color: #8bbfba;
+}
+.research-card-link:focus-visible { outline: 3px solid #38978b; outline-offset: 3px; }
+@media (max-width: 780px) {
+  .research-card .card-content { min-height: 310px; }
+}
+@media (max-width: 560px) {
+  .research-card .card-content { min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .research-card-link, .research-card-link span:last-child { transition: none !important; }
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a1224">
+<meta name="description" content="Developing a compact, low-power analog ASIC for silicon photomultiplier readout — where circuit design meets radiation detector instrumentation.">
+<meta property="og:type" content="article"><meta property="og:title" content="SATORI | Yuuki Watanabe">
+<meta property="og:description" content="Engineering the signal between light and data."><meta property="og:url" content="https://y-watanabe11.github.io/research/satori.html">
+<link rel="canonical" href="https://y-watanabe11.github.io/research/satori.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="research.css">
+<title>SATORI — Research | Yuuki Watanabe</title>
+</head>
+<body class="theme-satori">
+<a class="r-skip" href="#main">Skip to content</a>
+<div class="r-hero-region" id="top">
+<header class="r-shell r-nav">
+<a class="r-brand" href="../index.html" aria-label="Yuuki Watanabe homepage"><span class="r-brand-symbol">YW·</span><span>Yuuki Watanabe</span></a>
+<nav class="r-navlinks" aria-label="Main navigation"><a href="../index.html#research">Research</a><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a class="r-nav-pill" href="../index.html#contact">Contact ↗</a></nav>
+</header>
+<div class="r-shell">
+<section class="r-hero" aria-labelledby="research-title">
+<div class="r-hero-copy">
+<p class="r-eyebrow">RESEARCH / 01 — DETECTOR ELECTRONICS</p>
+<h1 id="research-title">SATORI<em>.</em></h1>
+<h2 class="r-hero-subtitle">Engineering the signal between light and data.</h2>
+<p class="r-hero-description">Developing a compact, low-power analog ASIC for silicon photomultiplier readout — where circuit design meets radiation detector instrumentation.</p>
+<div class="r-hero-actions"><a class="r-button primary" href="#overview">Explore the research <span class="r-arrow" aria-hidden="true">↗</span></a><a class="r-button ghost" href="../index.html#research">All research <span class="r-arrow" aria-hidden="true">↗</span></a></div>
+</div>
+<div class="r-hero-art" role="group" aria-label="ANALOG INTEGRATED CIRCUIT illustration">
+<span class="r-figure-label">FIELD NOTES / 01</span>
+<svg class="r-art-chip" viewBox="0 0 520 520" role="img" aria-label="Microchip and glowing detector readout paths">
+ <defs><linearGradient id="chipshade" x2="1" y2="1"><stop stop-color="#265a67"/><stop offset="1" stop-color="#112b47"/></linearGradient><radialGradient id="chiphalo"><stop stop-color="#b1ffe7" stop-opacity=".22"/><stop offset="1" stop-color="#b1ffe7" stop-opacity="0"/></radialGradient></defs>
+ <circle cx="260" cy="260" r="225" fill="url(#chiphalo)"/>
+ <g stroke="#b0f1df" stroke-opacity=".2" fill="none"><circle cx="260" cy="260" r="211"/><circle cx="260" cy="260" r="177" stroke-dasharray="3 13"/><path d="M20 260h480M260 20v480" stroke-dasharray="3 10"/></g>
+ <g stroke="#9accca" fill="none" stroke-width="2"><path d="M12 107H110L170 171M507 107H410L348 170M12 411H110L170 350M507 411H414L351 349M260 0V151M260 369V520M0 260H151M369 260H520"/></g>
+ <g class="chip-pulse" stroke="#b0ffeb" fill="none" stroke-width="3.5" stroke-linecap="round"><path d="M12 107H110L170 171M507 107H410L348 170M12 411H110L170 350M507 411H414L351 349M260 0V151M260 369V520M0 260H151M369 260H520"/></g>
+ <g fill="#a3f6e4"><circle cx="40" cy="107" r="4"/><circle cx="474" cy="411" r="4"/><circle cx="260" cy="31" r="4"/><circle cx="482" cy="260" r="4"/></g>
+ <rect x="165" y="161" width="190" height="199" rx="24" fill="url(#chipshade)" stroke="#a1e8da" stroke-width="3"/>
+ <g stroke="#c1ffef" stroke-width="2"><path d="M151 194h14M151 235h14M151 276h14M151 317h14M355 194h14M355 235h14M355 276h14M355 317h14M203 147v14M260 147v14M317 147v14M203 360v14M260 360v14M317 360v14"/></g>
+ <rect x="194" y="192" width="132" height="135" rx="13" fill="#275868" stroke="#aef9e7" stroke-width="2"/><rect class="chip-glow" x="214" y="212" width="92" height="95" rx="8" fill="#59b8aa" opacity=".14"/>
+ <g stroke="#c4fff0" stroke-width="2.4" fill="none"><path d="M225 259h70M260 225v68"/><circle cx="260" cy="259" r="25"/><circle cx="260" cy="259" r="9" fill="#a9f7e7"/></g>
+ <g font-family="monospace" font-size="11" letter-spacing="2" fill="#c5ede7"><text x="35" y="90">SiPM</text><text x="415" y="90">READOUT</text><text x="210" y="407">ANALOG / IC</text></g></svg>
+<div class="r-figure-bottom"><span>SIGNAL PATH / CONCEPTUAL</span><span>YUUKI WATANABE</span></div>
+</div></section>
+<div class="r-hero-footer"><span class="r-crumb">HOME / RESEARCH / <span>SATORI</span></span><a class="r-scroll" href="#overview">SCROLL TO EXPLORE ↓</a></div>
+</div></div>
+<main id="main">
+<section id="overview" class="r-section"><div class="r-shell r-content-grid">
+<div class="r-section-index" aria-hidden="true"><strong>01</strong><span>Overview</span></div>
+<div><p class="r-kicker">THE BIG PICTURE</p><h2 class="r-heading">Start with the <em>signal.</em></h2>
+<div class="r-prose"><p>A photodetector converts a physical event into an electrical signal. Readout electronics determine how much information can be recovered from that signal — and how reliably it can be measured.</p><p>SATORI focuses on a compact, low-power custom analog readout integrated circuit for silicon photomultipliers (SiPMs). It sits at the interface between detector physics and practical electronic instrumentation.</p></div>
+<div class="r-info-strip" aria-label="Research at a glance"><div class="r-info-item"><span class="r-fact-label">FIELD</span><strong>Analog / mixed-signal design</strong></div><div class="r-info-item"><span class="r-fact-label">DEVICE</span><strong>Silicon photomultiplier</strong></div><div class="r-info-item"><span class="r-fact-label">FOCUS</span><strong>Compact, low-power readout</strong></div></div></div>
+</div></section>
+<section id="approach" class="r-section r-work-section"><div class="r-shell r-content-grid">
+<div class="r-section-index" aria-hidden="true"><strong>02</strong><span>Approach</span></div>
+<div><p class="r-kicker">FROM QUESTION TO MEASUREMENT</p><h2 class="r-heading">How the pieces <em>connect.</em></h2>
+<p class="r-work-intro">A conceptual view of the scientific and engineering workflow behind this research area.</p>
+<div class="r-steps"><article class="r-step"><span class="r-step-no">01</span><h3>The detector</h3><p>Understand the signal produced by a SiPM and what the readout chain needs to preserve.</p></article>
+<article class="r-step"><span class="r-step-no">02</span><h3>The electronics</h3><p>Explore analog circuit design choices with attention to signal integrity, integration and power.</p></article>
+<article class="r-step"><span class="r-step-no">03</span><h3>The instrument</h3><p>Connect integrated-circuit design to practical detector readout and measurement workflows.</p></article></div></div>
+</div></section>
+<section id="focus" class="r-section r-notes-section"><div class="r-shell r-content-grid">
+<div class="r-section-index" aria-hidden="true"><strong>03</strong><span>In focus</span></div>
+<div class="r-notes-layout"><div><p class="r-kicker">RESEARCH INTERESTS</p><h2 class="r-heading">A closer look at the <em>readout.</em></h2>
+<div class="r-prose"><p>The work brings together the physical detector, the analog front end and the surrounding measurement system.</p></div><ul class="r-note-list"><li>Readout circuit architecture and the detector-to-electronics interface</li><li>Design considerations for compact, power-conscious analog instrumentation</li><li>Making electronic signals useful for downstream measurements and analysis</li></ul></div>
+<aside class="r-feature-panel"><p class="r-panel-head">THE IDEA BEHIND THE WORK</p><blockquote>Every measurement begins as a signal. The electronics decide what survives.</blockquote><p>SATORI / RESEARCH DIRECTION</p></aside>
+</div></div></section>
+<section class="r-resource-section" aria-label="Further reading"><div class="r-shell r-content-grid">
+<div class="r-section-index" aria-hidden="true"><strong>04</strong><span>Resources</span></div>
+<div class="r-resource-row"><div><p class="r-kicker">READ MORE</p><h2>Explore the context<br>behind the work.</h2></div><div class="r-resource-links"><a href="https://github.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer">GitHub / Projects and code <span aria-hidden="true">↗</span></a>
+<a href="https://medium.com/@watanabe42463" target="_blank" rel="noopener noreferrer">Research writing / Medium <span aria-hidden="true">↗</span></a></div></div>
+</div></section>
+<section class="r-explore-section" aria-labelledby="next-projects"><div class="r-shell">
+<div class="r-explore-head"><div><p class="r-kicker">KEEP EXPLORING</p><h2 id="next-projects">Other research.</h2></div><p>Different questions. A shared curiosity for how the universe works.</p></div>
+<div class="r-next-grid"><a class="r-next" href="xrism.html" style="--nextglow:#33416f"><span class="r-tag">RESEARCH 02 / HIGH-ENERGY ASTROPHYSICS</span><div><strong>XRISM</strong><small>Reading the universe in X-ray light.</small></div><span class="next-arrow" aria-hidden="true">↗</span></a>
+<a class="r-next" href="lunar-riches.html" style="--nextglow:#613d56"><span class="r-tag">RESEARCH 03 / LUNAR PARTICLE INSTRUMENTATION</span><div><strong>Lunar-RICHeS</strong><small>Measuring the particle environment beyond Earth.</small></div><span class="next-arrow" aria-hidden="true">↗</span></a></div>
+</div></section>
+</main>
+<footer class="r-footer"><div class="r-shell r-footer-inner"><span class="r-footer-note">© <span id="year">2026</span> YUUKI WATANABE</span><a href="../index.html#contact">Let's connect ↗</a><a href="#top">Back to top ↑</a></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
