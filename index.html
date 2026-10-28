@@ -3,71 +3,150 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fafaf8">
+  <meta name="theme-color" content="#0a1224">
   <meta name="description" content="Yuuki Watanabe — researcher and engineer working on astrophysics, radiation detectors, analog ASICs, and scientific computing.">
   <meta property="og:title" content="Yuuki Watanabe | Research & Engineering">
   <meta property="og:description" content="Astrophysics, detector instrumentation, ASIC design, and scientific computing.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://y-watanabe11.github.io/">
   <link rel="canonical" href="https://y-watanabe11.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Yuuki Watanabe — Research & Engineering</title>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="wrap nav">
-      <a href="#home" class="wordmark">Yuuki Watanabe<span class="dot">.</span></a>
-      <nav aria-label="Primary navigation">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Yuuki Watanabe — Home"><span class="brand-mark" aria-hidden="true">YW<span>·</span></span><span class="brand-name">Yuuki Watanabe</span></a>
+      <nav class="primary-nav" aria-label="Primary navigation">
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
+
   <main id="main">
-    <section id="home" class="hero wrap">
-      <div class="eyebrow"><span class="pulse"></span> Astrophysics · Electronics · Computation</div>
-      <h1>Exploring the universe.<br><span class="muted">Building the tools to understand it.</span></h1>
-      <p class="hero-copy">I'm <strong>Yuuki Watanabe</strong>, a master's student at Tokyo University of Science. My work connects radiation detector development, analog integrated circuits, X-ray astronomy, and scientific computing.</p>
-      <div class="actions">
-        <a class="button primary" href="#research">Explore my research <span aria-hidden="true">↗</span></a>
-        <a class="button secondary" href="https://github.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    <section id="home" class="hero">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> RESEARCH / ENGINEERING / EXPLORATION</div>
+          <h1>Exploring the <em>universe.</em><span>Building the tools to understand it.</span></h1>
+          <p class="hero-description">I'm <strong>Yuuki Watanabe</strong>, a master's student at Tokyo University of Science. My work connects radiation detector development, analog integrated circuits, X-ray astronomy, and scientific computing.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#research">Explore my research <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="https://github.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="visual-panel" aria-label="Abstract illustration of orbital paths and detector signals" role="img">
+          <div class="visual-top"><span>FIELD NOTES / 001</span><span class="visual-sparkle" aria-hidden="true">✳</span></div>
+          <svg class="orbit-art" viewBox="0 0 540 540" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="core-glow"><stop offset="0" stop-color="#9eecdf" stop-opacity=".48"/><stop offset=".42" stop-color="#4a8dd1" stop-opacity=".16"/><stop offset="1" stop-color="#4a8dd1" stop-opacity="0"/></radialGradient>
+              <linearGradient id="core-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b1fff0"/><stop offset="1" stop-color="#5281cb"/></linearGradient>
+              <linearGradient id="orbit-gradient"><stop offset="0" stop-color="#8debdc" stop-opacity=".08"/><stop offset=".45" stop-color="#8debdc" stop-opacity=".92"/><stop offset="1" stop-color="#8debdc" stop-opacity=".1"/></linearGradient>
+            </defs>
+            <g stroke="#b5d2f7" stroke-opacity=".10" fill="none"><circle cx="270" cy="270" r="224"/><circle cx="270" cy="270" r="168"/><circle cx="270" cy="270" r="108"/><path d="M270 22v496M22 270h496"/><path d="M95 95l350 350M445 95L95 445" stroke-dasharray="3 9"/></g>
+            <circle cx="270" cy="270" r="184" fill="url(#core-glow)"/>
+            <g fill="none" transform="rotate(-29 270 270)"><ellipse cx="270" cy="270" rx="220" ry="93" stroke="url(#orbit-gradient)" stroke-width="1.8"/><ellipse cx="270" cy="270" rx="122" ry="222" stroke="#93bbeb" stroke-opacity=".5" stroke-width="1.1" stroke-dasharray="5 8"/></g>
+            <g stroke="#91e5d8" stroke-linecap="round" fill="none"><path d="M270 163v-24M270 377v24M163 270h-24M377 270h24" stroke-opacity=".6"/><circle cx="270" cy="270" r="91" stroke-opacity=".65" stroke-dasharray="1 9" stroke-width="3"/></g>
+            <g transform="translate(270 270) rotate(-22)"><rect x="-56" y="-56" width="112" height="112" rx="12" fill="#142d49" stroke="url(#core-gradient)" stroke-width="1.5"/><rect x="-34" y="-34" width="68" height="68" rx="5" fill="#234d68" stroke="#a4f4e6" stroke-opacity=".7"/><path d="M-15 0h30M0-15v30" stroke="#c8fff4" stroke-width="2"/><g stroke="#8bdfd4" stroke-width="2"><path d="M-72-36h16M-72-12h16M-72 12h16M-72 36h16M56-36h16M56-12h16M56 12h16M56 36h16M-36-72v16M-12-72v16M12-72v16M36-72v16M-36 56v16M-12 56v16M12 56v16M36 56v16"/></g></g>
+            <circle cx="114" cy="186" r="5" fill="#a1f7e6"/><circle cx="420" cy="354" r="4" fill="#ffc88e"/><circle cx="352" cy="70" r="3" fill="#b4d8ff"/><circle cx="103" cy="390" r="2" fill="#b4d8ff"/><path d="M114 186h-60M420 354h59" stroke="#a4e4dc" stroke-opacity=".55"/><g fill="#a9c8e5" font-family="monospace" font-size="10" letter-spacing="1.2"><text x="54" y="176">X-RAY</text><text x="449" y="346">SIGNAL</text><text x="304" y="477">INSTRUMENT / 01</text></g>
+          </svg>
+          <div class="visual-bottom"><span>FROM COSMIC SIGNALS<br>TO SILICON CIRCUITS</span><span class="visual-cross" aria-hidden="true">+</span></div>
+        </div>
       </div>
-      <div class="hero-meta"><span>Tokyo University of Science</span><span>Japan · Open to research collaborations</span></div>
+      <div class="container hero-bottom"><span><span class="micro-line"></span> TOKYO UNIVERSITY OF SCIENCE</span><span>JAPAN · OPEN TO RESEARCH COLLABORATIONS</span><a href="#research">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
     </section>
-    <section id="research" class="section wrap">
-      <div class="section-heading"><div><p class="kicker">01 / RESEARCH</p><h2>Selected research</h2></div><p>From detector electronics to high-energy astrophysics.</p></div>
-      <div class="cards research-grid">
-        <article class="card"><span class="card-index">RESEARCH / 01</span><div class="symbol" aria-hidden="true">◈</div><h3>SATORI</h3><p class="category">Analog ASIC · SiPM Readout</p><p>Developing a compact, low-power custom readout integrated circuit for silicon photomultipliers, connecting circuit design with practical detector instrumentation.</p><div class="tags"><span>ASIC</span><span>SiPM</span><span>Instrumentation</span></div></article>
-        <article class="card"><span class="card-index">RESEARCH / 02</span><div class="symbol" aria-hidden="true">✳</div><h3>XRISM</h3><p class="category">X-ray Astronomy · Spectroscopy</p><p>Working with high-resolution X-ray spectroscopy and reproducible analysis workflows to investigate energetic processes in astrophysical sources.</p><div class="tags"><span>XRISM</span><span>Python</span><span>Spectroscopy</span></div></article>
-        <article class="card"><span class="card-index">RESEARCH / 03</span><div class="symbol" aria-hidden="true">◎</div><h3>Lunar-RICHeS</h3><p class="category">Particle Detection · Lunar Science</p><p>Contributing to high-energy particle detector studies, including charged-particle measurements and detector response analysis for lunar science applications.</p><div class="tags"><span>DSSD</span><span>Particle Physics</span><span>Moon</span></div></article>
+
+    <section id="research" class="section research-section">
+      <div class="container">
+        <div class="section-heading"><div><p class="section-kicker"><span>01</span> / THE WORK</p><h2>Selected <span>research.</span></h2></div><p class="section-intro">From detector electronics to high-energy astrophysics. Three ways of turning questions into measurements.</p></div>
+        <div class="research-grid">
+          <article class="research-card satori-card">
+            <div class="card-art art-asic" aria-hidden="true">
+              <span class="art-label">01 / ELECTRONICS</span>
+              <svg viewBox="0 0 360 190" focusable="false">
+                <g stroke="#78c4d4" stroke-opacity=".34" fill="none" stroke-width="1.5">
+                  <path d="M0 38h112l34 36M360 38H248l-34 36M0 151h112l34-35M360 151H248l-34-35M180 0v42M180 148v42M0 94h105M255 94h105"/>
+                  <path d="M30 9v29M330 151v30M78 150v30M284 8v30" stroke-dasharray="3 5"/>
+                </g>
+                <g class="satori-signals">
+                  <path d="M0 38H112L126 52"/>
+                  <path d="M360 38H248L234 52"/>
+                  <path d="M0 151H112L126 138"/>
+                  <path d="M360 151H248L234 138"/>
+                  <path d="M180 0V42"/>
+                  <path d="M180 190V148"/>
+                  <path d="M0 94H126"/>
+                  <path d="M360 94H234"/>
+                </g>
+                <rect class="satori-chip" x="126" y="42" width="108" height="106" rx="13" fill="#183e5b" stroke="#a4eced" stroke-width="1.8"/>
+                <rect class="satori-core" x="147" y="63" width="66" height="64" rx="5" fill="#2b6172" stroke="#a6efe6" stroke-opacity=".65"/>
+                <g class="satori-core-mark" fill="none" stroke="#b0fdf0" stroke-width="2.5"><path d="M164 95h32M180 79v32"/></g>
+                <g class="satori-nodes" fill="#93dedc">
+                  <circle cx="30" cy="38" r="3"/><circle cx="330" cy="151" r="3"/>
+                  <circle cx="180" cy="14" r="3"/><circle cx="330" cy="38" r="3"/>
+                  <circle cx="30" cy="151" r="3"/><circle cx="180" cy="176" r="3"/>
+                </g>
+              </svg>
+              <span class="art-corner">S / 01</span>
+            </div>
+            <button class="circuit-toggle" type="button" aria-pressed="false" aria-label="Activate SATORI circuit animation">
+              <span class="circuit-led" aria-hidden="true"></span>
+              <span class="circuit-toggle-text" aria-hidden="true">Power on</span>
+            </button>
+            <div class="card-content"><p class="card-overline">ANALOG ASIC <span>↗</span> SIPM READOUT</p><h3>SATORI</h3><p>Developing a compact, low-power custom readout integrated circuit for silicon photomultipliers, connecting circuit design with practical detector instrumentation.</p><div class="tags"><span>ASIC</span><span>SiPM</span><span>Instrumentation</span></div></div>
+          </article>
+          <article class="research-card">
+            <div class="card-art art-xray" aria-hidden="true"><span class="art-label">02 / ASTROPHYSICS</span><svg viewBox="0 0 360 190" focusable="false"><g stroke="#adbadf" stroke-opacity=".19"><path d="M0 45h360M0 90h360M0 135h360M45 0v190M90 0v190M135 0v190M180 0v190M225 0v190M270 0v190M315 0v190"/></g><path d="M0 143C30 141 40 136 62 137S98 154 118 126s20-82 35-83 22 99 46 101 25-23 44-25 29 18 45 12 26-51 37-52 16 47 35 49" fill="none" stroke="#9dafff" stroke-width="2.5"/><path d="M0 143C30 141 40 136 62 137S98 154 118 126s20-82 35-83 22 99 46 101 25-23 44-25 29 18 45 12 26-51 37-52 16 47 35 49V190H0Z" fill="#8da3fa" fill-opacity=".10"/><path d="M153 20v150" stroke="#bdcaff" stroke-dasharray="4 6" stroke-opacity=".55"/><circle cx="153" cy="43" r="5" fill="#c2ccff"/></svg><span class="art-corner">X / 02</span></div>
+            <div class="card-content"><p class="card-overline">X-RAY ASTRONOMY <span>↗</span> SPECTROSCOPY</p><h3>XRISM</h3><p>Working with high-resolution X-ray spectroscopy and reproducible analysis workflows to investigate energetic processes in astrophysical sources.</p><div class="tags"><span>XRISM</span><span>Python</span><span>Spectroscopy</span></div></div>
+          </article>
+          <article class="research-card">
+            <div class="card-art art-lunar" aria-hidden="true"><span class="art-label">03 / SPACE SCIENCE</span><svg viewBox="0 0 360 190" focusable="false"><defs><clipPath id="moon-clip"><circle cx="190" cy="108" r="91"/></clipPath></defs><g fill="none" stroke="#dcb9ad" stroke-opacity=".25"><circle cx="190" cy="108" r="118" stroke-dasharray="4 7"/><path d="M18 144q167-155 333-29"/></g><circle cx="190" cy="108" r="91" fill="#b98b83" fill-opacity=".23" stroke="#ffd2b3" stroke-opacity=".6"/><g clip-path="url(#moon-clip)" fill="#dbaca0" fill-opacity=".23"><circle cx="155" cy="65" r="22"/><circle cx="220" cy="104" r="35"/><circle cx="163" cy="144" r="14"/><circle cx="218" cy="165" r="15"/><circle cx="116" cy="116" r="9"/></g><path d="M15 132q170-100 331-3" fill="none" stroke="#ffd6bc" stroke-width="2"/><circle cx="76" cy="103" r="5" fill="#ffd9c5"/><circle cx="310" cy="120" r="3" fill="#ffe3d2"/></svg><span class="art-corner">L / 03</span></div>
+            <div class="card-content"><p class="card-overline">PARTICLE DETECTION <span>↗</span> LUNAR SCIENCE</p><h3>Lunar-RICHeS</h3><p>Contributing to high-energy particle detector studies, including charged-particle measurements and detector response analysis for lunar science applications.</p><div class="tags"><span>DSSD</span><span>Particle Physics</span><span>Moon</span></div></div>
+          </article>
+        </div>
       </div>
     </section>
-    <section id="projects" class="section wrap">
-      <div class="section-heading"><div><p class="kicker">02 / PROJECTS</p><h2>Software & engineering</h2></div><p>Tools, experiments, and reproducible workflows.</p></div>
-      <div class="project-list">
-        <a class="project" href="https://github.com/Y-Watanabe11/randomness-beyond-histograms" target="_blank" rel="noopener noreferrer"><span class="project-no">01</span><div><h3>Randomness Beyond Histograms</h3><p>Experiments on phase noise, SHA-256, and time-series predictability.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
-        <a class="project" href="https://github.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer"><span class="project-no">02</span><div><h3>More on GitHub</h3><p>Code, analysis utilities, and projects in progress.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
+
+    <section id="projects" class="projects-section">
+      <div class="container projects-inner"><div class="section-heading section-heading-dark"><div><p class="section-kicker"><span>02</span> / THE BUILDS</p><h2>Software &<br><span>engineering.</span></h2></div><p class="section-intro">Experiments, tools, and reproducible workflows developed along the way.</p></div>
+        <div class="project-list">
+          <a class="project-row" href="https://github.com/Y-Watanabe11/randomness-beyond-histograms" target="_blank" rel="noopener noreferrer"><span class="project-number">01</span><div><h3>Randomness Beyond Histograms</h3><p>Experiments on phase noise, SHA-256, and time-series predictability.</p></div><span class="project-arrow" aria-hidden="true">↗</span></a>
+          <a class="project-row" href="https://github.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer"><span class="project-number">02</span><div><h3>More on GitHub</h3><p>Code, analysis utilities, and projects in progress.</p></div><span class="project-arrow" aria-hidden="true">↗</span></a>
+        </div>
+        <p class="projects-footnote">BUILT WITH CURIOSITY, SHARED IN THE OPEN <span aria-hidden="true">✳</span></p>
       </div>
     </section>
-    <section id="about" class="section wrap about">
-      <div><p class="kicker">03 / ABOUT</p><h2>At the intersection of<br>physics and engineering.</h2></div>
-      <div class="about-copy"><p>I am a master's student in the Graduate School of Science and Technology at Tokyo University of Science. I am interested in developing instruments that make new observations possible, and in using careful data analysis to learn from those observations.</p><p>My interests span radiation detectors, analog and mixed-signal electronics, spacecraft instrumentation, high-energy astrophysics, and scientific software.</p><div class="mini-label">CURRENT AFFILIATION</div><p class="affiliation">Tokyo University of Science · Graduate Student</p></div>
-    </section>
-    <section id="contact" class="section wrap contact">
-      <p class="kicker">04 / CONNECT</p><h2>Let's connect<span class="dot">.</span></h2>
-      <p>Interested in my research or working together? Find my work and writing below.</p>
-      <div class="social-links">
-        <a href="https://github.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/yuuki-watanabe-51b71733a/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-        <a href="https://medium.com/@watanabe42463" target="_blank" rel="noopener noreferrer">Medium ↗</a>
-        <a href="https://qiita.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer">Qiita ↗</a>
-        <a href="https://note.com/y_watanabe_11" target="_blank" rel="noopener noreferrer">note ↗</a>
-      </div>
-    </section>
+
+    <section id="about" class="section about-section"><div class="container about-grid"><div class="about-lead"><p class="section-kicker"><span>03</span> / ABOUT ME</p><h2>Between the<br><em>observable</em> and<br>the possible.</h2><div class="about-decoration" aria-hidden="true"><span>✳</span><span>SPACE / SILICON / SCIENCE</span></div></div><div class="about-copy"><p class="about-opening">I work at the intersection of physics and engineering.</p><p>I am a master's student in the Graduate School of Science and Technology at Tokyo University of Science. I am interested in developing instruments that make new observations possible, and in using careful data analysis to learn from those observations.</p><p>My interests span radiation detectors, analog and mixed-signal electronics, spacecraft instrumentation, high-energy astrophysics, and scientific software.</p><div class="affiliation-card"><span>NOW / CURRENT AFFILIATION</span><strong>Tokyo University of Science</strong><small>Graduate Student · Japan</small></div></div></div></section>
+
+    <section id="contact" class="contact-section"><div class="container"><div class="contact-panel"><div class="contact-top"><p class="section-kicker"><span>04</span> / SAY HELLO</p><span class="contact-star" aria-hidden="true">✳</span></div><h2>Let's make something<br><em>meaningful.</em></h2><p>Interested in my research or working together? Find my work and writing below.</p><div class="social-links"><a href="https://github.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/yuuki-watanabe-51b71733a/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://medium.com/@watanabe42463" target="_blank" rel="noopener noreferrer">Medium <span aria-hidden="true">↗</span></a><a href="https://qiita.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer">Qiita <span aria-hidden="true">↗</span></a><a href="https://note.com/y_watanabe_11" target="_blank" rel="noopener noreferrer">note <span aria-hidden="true">↗</span></a></div></div></div></section>
   </main>
-  <footer class="footer"><div class="wrap footer-inner"><span>© <span id="year">2026</span> Yuuki Watanabe</span><span>Built with care · Hosted on GitHub Pages</span><a href="#home">Back to top ↑</a></div></footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <footer class="footer"><div class="container footer-inner"><span>© <span id="year">2026</span> Yuuki Watanabe</span><span>Exploring ideas, building instruments.</span><a href="#home">Back to top ↑</a></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Keep the SATORI circuit interactive without any framework or server.
+    const circuitButton = document.querySelector('.circuit-toggle');
+    const circuitCard = document.querySelector('.satori-card');
+    if (circuitButton && circuitCard) {
+      circuitButton.addEventListener('click', () => {
+        const powered = circuitCard.classList.toggle('is-energized');
+        circuitButton.setAttribute('aria-pressed', String(powered));
+        circuitButton.setAttribute('aria-label', powered
+          ? 'Deactivate SATORI circuit animation'
+          : 'Activate SATORI circuit animation');
+        circuitButton.querySelector('.circuit-toggle-text').textContent =
+          powered ? 'Power off' : 'Power on';
+      });
+    }
+  </script>
 </body>
 </html>
