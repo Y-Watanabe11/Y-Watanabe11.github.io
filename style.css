@@ -166,25 +166,20 @@ h2 span { color: #80909f; }
   background: #9bffe5;
   box-shadow: 0 0 10px 2px rgba(104, 255, 222, .55);
 }
-.satori-card.is-energized .art-asic::after,
-.satori-card:has(.circuit-toggle:focus-visible) .art-asic::after { opacity: 1; }
-.satori-card.is-energized .satori-signals path,
-.satori-card:has(.circuit-toggle:focus-visible) .satori-signals path {
+.satori-card.is-energized .art-asic::after { opacity: 1; }
+.satori-card.is-energized .satori-signals path {
   opacity: 1;
   animation: satori-current 1.7s linear infinite;
   animation-delay: var(--flow-delay, 0s);
 }
-.satori-card.is-energized .satori-core,
-.satori-card:has(.circuit-toggle:focus-visible) .satori-core {
+.satori-card.is-energized .satori-core {
   stroke: #d1fff1;
   filter: drop-shadow(0 0 11px rgba(111, 251, 218, .75));
 }
-.satori-card.is-energized .satori-chip,
-.satori-card:has(.circuit-toggle:focus-visible) .satori-chip {
+.satori-card.is-energized .satori-chip {
   filter: drop-shadow(0 0 10px rgba(119, 255, 227, .55));
 }
-.satori-card.is-energized .satori-nodes circle,
-.satori-card:has(.circuit-toggle:focus-visible) .satori-nodes circle {
+.satori-card.is-energized .satori-nodes circle {
   opacity: 1;
   animation: satori-node-glow 1.8s ease-in-out infinite alternate;
   animation-delay: var(--node-delay, 0s);
@@ -340,10 +335,8 @@ h2 span { color: #80909f; }
   .footer-inner>span:nth-child(2) { width: 100%; order: 3; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .satori-card.is-energized .satori-signals path,
-  .satori-card:has(.circuit-toggle:focus-visible) .satori-signals path { opacity: 1; }
-  .satori-card.is-energized .satori-nodes circle,
-  .satori-card:has(.circuit-toggle:focus-visible) .satori-nodes circle { opacity: 1; }
+  .satori-card.is-energized .satori-signals path { opacity: 1; }
+  .satori-card.is-energized .satori-nodes circle { opacity: 1; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
