@@ -68,8 +68,39 @@
       <div class="container">
         <div class="section-heading"><div><p class="section-kicker"><span>01</span> / THE WORK</p><h2>Selected <span>research.</span></h2></div><p class="section-intro">From detector electronics to high-energy astrophysics. Three ways of turning questions into measurements.</p></div>
         <div class="research-grid">
-          <article class="research-card">
-            <div class="card-art art-asic" aria-hidden="true"><span class="art-label">01 / ELECTRONICS</span><svg viewBox="0 0 360 190" focusable="false"><g stroke="#78c4d4" stroke-opacity=".34" fill="none" stroke-width="1.5"><path d="M0 38h112l34 36M360 38H248l-34 36M0 151h112l34-35M360 151H248l-34-35M180 0v42M180 148v42M0 94h105M255 94h105"/><path d="M30 9v29M330 151v30M78 150v30M284 8v30" stroke-dasharray="3 5"/></g><rect x="126" y="42" width="108" height="106" rx="13" fill="#183e5b" stroke="#a4eced" stroke-width="1.8"/><rect x="147" y="63" width="66" height="64" rx="5" fill="#2b6172" stroke="#a6efe6" stroke-opacity=".65"/><g stroke="#b0fdf0" stroke-width="2.5"><path d="M164 95h32M180 79v32"/></g><g fill="#93dedc"><circle cx="30" cy="38" r="3"/><circle cx="330" cy="151" r="3"/><circle cx="180" cy="14" r="3"/></g></svg><span class="art-corner">S / 01</span></div>
+          <article class="research-card satori-card">
+            <div class="card-art art-asic" aria-hidden="true">
+              <span class="art-label">01 / ELECTRONICS</span>
+              <svg viewBox="0 0 360 190" focusable="false">
+                <g stroke="#78c4d4" stroke-opacity=".34" fill="none" stroke-width="1.5">
+                  <path d="M0 38h112l34 36M360 38H248l-34 36M0 151h112l34-35M360 151H248l-34-35M180 0v42M180 148v42M0 94h105M255 94h105"/>
+                  <path d="M30 9v29M330 151v30M78 150v30M284 8v30" stroke-dasharray="3 5"/>
+                </g>
+                <g class="satori-signals">
+                  <path d="M0 38H112L126 52"/>
+                  <path d="M360 38H248L234 52"/>
+                  <path d="M0 151H112L126 138"/>
+                  <path d="M360 151H248L234 138"/>
+                  <path d="M180 0V42"/>
+                  <path d="M180 190V148"/>
+                  <path d="M0 94H126"/>
+                  <path d="M360 94H234"/>
+                </g>
+                <rect class="satori-chip" x="126" y="42" width="108" height="106" rx="13" fill="#183e5b" stroke="#a4eced" stroke-width="1.8"/>
+                <rect class="satori-core" x="147" y="63" width="66" height="64" rx="5" fill="#2b6172" stroke="#a6efe6" stroke-opacity=".65"/>
+                <g class="satori-core-mark" fill="none" stroke="#b0fdf0" stroke-width="2.5"><path d="M164 95h32M180 79v32"/></g>
+                <g class="satori-nodes" fill="#93dedc">
+                  <circle cx="30" cy="38" r="3"/><circle cx="330" cy="151" r="3"/>
+                  <circle cx="180" cy="14" r="3"/><circle cx="330" cy="38" r="3"/>
+                  <circle cx="30" cy="151" r="3"/><circle cx="180" cy="176" r="3"/>
+                </g>
+              </svg>
+              <span class="art-corner">S / 01</span>
+            </div>
+            <button class="circuit-toggle" type="button" aria-pressed="false" aria-label="Activate SATORI circuit animation">
+              <span class="circuit-led" aria-hidden="true"></span>
+              <span class="circuit-toggle-text" aria-hidden="true">Power on</span>
+            </button>
             <div class="card-content"><p class="card-overline">ANALOG ASIC <span>↗</span> SIPM READOUT</p><h3>SATORI</h3><p>Developing a compact, low-power custom readout integrated circuit for silicon photomultipliers, connecting circuit design with practical detector instrumentation.</p><div class="tags"><span>ASIC</span><span>SiPM</span><span>Instrumentation</span></div></div>
           </article>
           <article class="research-card">
@@ -99,6 +130,23 @@
     <section id="contact" class="contact-section"><div class="container"><div class="contact-panel"><div class="contact-top"><p class="section-kicker"><span>04</span> / SAY HELLO</p><span class="contact-star" aria-hidden="true">✳</span></div><h2>Let's make something<br><em>meaningful.</em></h2><p>Interested in my research or working together? Find my work and writing below.</p><div class="social-links"><a href="https://github.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/yuuki-watanabe-51b71733a/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://medium.com/@watanabe42463" target="_blank" rel="noopener noreferrer">Medium <span aria-hidden="true">↗</span></a><a href="https://qiita.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer">Qiita <span aria-hidden="true">↗</span></a><a href="https://note.com/y_watanabe_11" target="_blank" rel="noopener noreferrer">note <span aria-hidden="true">↗</span></a></div></div></div></section>
   </main>
   <footer class="footer"><div class="container footer-inner"><span>© <span id="year">2026</span> Yuuki Watanabe</span><span>Exploring ideas, building instruments.</span><a href="#home">Back to top ↑</a></div></footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Keep the SATORI circuit interactive without any framework or server.
+    const circuitButton = document.querySelector('.circuit-toggle');
+    const circuitCard = document.querySelector('.satori-card');
+    if (circuitButton && circuitCard) {
+      circuitButton.addEventListener('click', () => {
+        const powered = circuitCard.classList.toggle('is-energized');
+        circuitButton.setAttribute('aria-pressed', String(powered));
+        circuitButton.setAttribute('aria-label', powered
+          ? 'Deactivate SATORI circuit animation'
+          : 'Activate SATORI circuit animation');
+        circuitButton.querySelector('.circuit-toggle-text').textContent =
+          powered ? 'Power off' : 'Power on';
+      });
+    }
+  </script>
 </body>
 </html>
