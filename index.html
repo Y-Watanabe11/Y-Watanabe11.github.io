@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style-20261028.css">
   <link rel="stylesheet" href="xrism.css">
+  <link rel="stylesheet" href="lunar.css">
   <title>Yuuki Watanabe — Research & Engineering</title>
 </head>
 <body>
@@ -162,8 +163,65 @@
             </button>
             <div class="card-content"><p class="card-overline">X-RAY ASTRONOMY <span>↗</span> SPECTROSCOPY</p><h3>XRISM</h3><p>Working with high-resolution X-ray spectroscopy and reproducible analysis workflows to investigate energetic processes in astrophysical sources.</p><div class="tags"><span>XRISM</span><span>Python</span><span>Spectroscopy</span></div></div>
           </article>
-          <article class="research-card">
-            <div class="card-art art-lunar" aria-hidden="true"><span class="art-label">03 / SPACE SCIENCE</span><svg viewBox="0 0 360 190" focusable="false"><defs><clipPath id="moon-clip"><circle cx="190" cy="108" r="91"/></clipPath></defs><g fill="none" stroke="#dcb9ad" stroke-opacity=".25"><circle cx="190" cy="108" r="118" stroke-dasharray="4 7"/><path d="M18 144q167-155 333-29"/></g><circle cx="190" cy="108" r="91" fill="#b98b83" fill-opacity=".23" stroke="#ffd2b3" stroke-opacity=".6"/><g clip-path="url(#moon-clip)" fill="#dbaca0" fill-opacity=".23"><circle cx="155" cy="65" r="22"/><circle cx="220" cy="104" r="35"/><circle cx="163" cy="144" r="14"/><circle cx="218" cy="165" r="15"/><circle cx="116" cy="116" r="9"/></g><path d="M15 132q170-100 331-3" fill="none" stroke="#ffd6bc" stroke-width="2"/><circle cx="76" cy="103" r="5" fill="#ffd9c5"/><circle cx="310" cy="120" r="3" fill="#ffe3d2"/></svg><span class="art-corner">L / 03</span></div>
+          <article class="research-card lunar-card">
+            <div class="card-art art-lunar" aria-hidden="true">
+              <span class="art-label">03 / SPACE SCIENCE</span>
+              <svg class="lunar-illustration" viewBox="0 0 360 190" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="lunar-moon-grad" cx="32%" cy="28%" r="80%">
+                    <stop offset="0" stop-color="#e9d0bc"/>
+                    <stop offset=".62" stop-color="#c69da2"/>
+                    <stop offset="1" stop-color="#806e91"/>
+                  </radialGradient>
+                  <clipPath id="lunar-moon-clip">
+                    <circle cx="170" cy="105" r="67"/>
+                  </clipPath>
+                </defs>
+                <g class="lunar-stars" fill="#ffebd7" opacity=".7">
+                  <circle cx="32" cy="47" r="1.5"/><circle cx="55" cy="146" r="1"/>
+                  <circle cx="285" cy="31" r="1.5"/><circle cx="335" cy="153" r="1.2"/>
+                  <circle cx="247" cy="20" r="1"/><circle cx="82" cy="23" r="1"/>
+                  <path d="M306 53v12M300 59h12" fill="none" stroke="#f6e5dc" stroke-width="1.2"/>
+                </g>
+                <g class="lunar-orbits" fill="none" stroke="#eed1d3" stroke-opacity=".28">
+                  <path d="M19 143C63 27 244 -4 337 113" stroke-width="1.2"/>
+                  <path d="M25 158C83 46 261 29 342 143" stroke-width="1" stroke-dasharray="3 7"/>
+                </g>
+                <circle class="lunar-moon-halo" cx="170" cy="105" r="78" fill="none" stroke="#f3cfc3" stroke-opacity=".26" stroke-width="1.5"/>
+                <circle class="lunar-moon" cx="170" cy="105" r="67" fill="url(#lunar-moon-grad)" stroke="#ffe8d1" stroke-opacity=".78" stroke-width="1.4"/>
+                <g clip-path="url(#lunar-moon-clip)">
+                  <path d="M115 62C138 77 145 105 152 123S183 172 227 169L242 202L90 202Z" fill="#6d6284" opacity=".24"/>
+                  <g fill="#92798d" fill-opacity=".32" stroke="#ffe5d3" stroke-opacity=".2">
+                    <circle cx="144" cy="75" r="17"/><circle cx="196" cy="110" r="23"/>
+                    <circle cx="151" cy="137" r="11"/><circle cx="201" cy="67" r="9"/>
+                    <circle cx="116" cy="111" r="8"/><circle cx="213" cy="155" r="13"/>
+                  </g>
+                  <g fill="none" stroke="#f9dbc9" stroke-opacity=".23">
+                    <circle cx="144" cy="75" r="11"/><circle cx="196" cy="110" r="17"/>
+                    <circle cx="151" cy="137" r="7"/>
+                  </g>
+                </g>
+                <g class="lunar-tracks" fill="none" stroke-linecap="round">
+                  <path class="lunar-track-guide" d="M12 63C101 45 216 100 332 133" stroke="#f5cdad" stroke-opacity=".4" stroke-width="1.3"/>
+                  <path class="lunar-track-guide" d="M20 169C128 126 222 142 342 48" stroke="#c4e9ed" stroke-opacity=".35" stroke-width="1.3"/>
+                  <path class="lunar-particle-flash lunar-particle-warm" d="M12 63C101 45 216 100 332 133" pathLength="180"/>
+                  <path class="lunar-particle-flash lunar-particle-cool" d="M20 169C128 126 222 142 342 48" pathLength="180"/>
+                </g>
+                <!-- Symbolic layered DSSD detector, not an engineering diagram. -->
+                <g class="lunar-detector" transform="translate(276 93)">
+                  <path d="M3 9L28 3V48L3 54Z" fill="#34425b" stroke="#b5cedc" stroke-width="1.6"/>
+                  <path d="M14 5L39 0V45L14 50Z" fill="#576077" stroke="#e2c5be" stroke-width="1.8"/>
+                  <path d="M22 4V49M31 2V46M14 18L39 13M14 33L39 28" stroke="#f8d8c9" stroke-opacity=".54" stroke-width="1"/>
+                  <circle class="lunar-hit-ring" cx="26" cy="24" r="11" fill="none" stroke="#b7fff0" stroke-width="1.5"/>
+                  <circle class="lunar-hit" cx="26" cy="24" r="3" fill="#bcfff1"/>
+                </g>
+              </svg>
+              <span class="art-corner">L / 03</span>
+            </div>
+            <button class="circuit-toggle lunar-toggle" type="button" aria-pressed="false" aria-label="Start Lunar-RICHeS particle tracking animation">
+              <span class="circuit-led" aria-hidden="true"></span>
+              <span class="lunar-toggle-text" aria-hidden="true">Track particles</span>
+            </button>
             <div class="card-content"><p class="card-overline">PARTICLE DETECTION <span>↗</span> LUNAR SCIENCE</p><h3>Lunar-RICHeS</h3><p>Contributing to high-energy particle detector studies, including charged-particle measurements and detector response analysis for lunar science applications.</p><div class="tags"><span>DSSD</span><span>Particle Physics</span><span>Moon</span></div></div>
           </article>
         </div>
@@ -215,6 +273,21 @@
           : 'Start XRISM observation animation');
         xrismButton.querySelector('.xrism-toggle-text').textContent =
           observing ? 'Pause scan' : 'Observe';
+      });
+    }
+
+    // Particle tracks are interactive on touch and keyboard, without dependencies.
+    const lunarCard = document.querySelector('.lunar-card');
+    const lunarButton = document.querySelector('.lunar-toggle');
+    if (lunarCard && lunarButton) {
+      lunarButton.addEventListener('click', () => {
+        const tracking = lunarCard.classList.toggle('is-tracking');
+        lunarButton.setAttribute('aria-pressed', String(tracking));
+        lunarButton.setAttribute('aria-label', tracking
+          ? 'Stop Lunar-RICHeS particle tracking animation'
+          : 'Start Lunar-RICHeS particle tracking animation');
+        lunarButton.querySelector('.lunar-toggle-text').textContent =
+          tracking ? 'Pause tracking' : 'Track particles';
       });
     }
   </script>
