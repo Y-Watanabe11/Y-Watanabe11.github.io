@@ -1,0 +1,115 @@
+/* XRISM spacecraft illustration and gentle observation interaction.
+   Kept separate from the base stylesheet to avoid disrupting the other cards. */
+.xrism-card { position: relative; }
+
+.xrism-card .art-xray {
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 55% 36%, rgba(118, 166, 206, .24), transparent 61%),
+    linear-gradient(155deg, #2c4363 0%, #202f50 54%, #182441 100%);
+}
+
+.xrism-card .art-xray::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 58% 42%, rgba(178, 225, 248, .12), transparent 64%);
+  opacity: .55;
+  transition: opacity .55s ease;
+}
+
+.xrism-card .xrism-illustration {
+  top: 0;
+  pointer-events: none;
+}
+
+.xrism-satellite {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform .75s cubic-bezier(.22, 1, .36, 1), filter .6s ease;
+}
+
+.xrism-observation {
+  opacity: 0;
+  transition: opacity .55s ease;
+}
+
+.xrism-beam-halo {
+  stroke: #b7ecff;
+  stroke-width: 11;
+  stroke-linecap: round;
+  opacity: .24;
+  filter: blur(5px);
+}
+
+.xrism-beam {
+  stroke: #d0f4ff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 8 13;
+  filter: drop-shadow(0 0 3px rgba(190, 240, 255, .7));
+}
+
+.xrism-source-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.xrism-mirror { transition: filter .55s ease, stroke .55s ease; }
+
+.xrism-card.is-observing .xrism-observation { opacity: 1; }
+.xrism-card.is-observing .xrism-beam {
+  animation: xrism-beam-flow 3s linear infinite;
+}
+.xrism-card.is-observing .xrism-source-ring {
+  animation: xrism-soft-pulse 3s ease-in-out infinite;
+}
+.xrism-card.is-observing .xrism-satellite {
+  transform: translateY(-3px) rotate(-.5deg);
+  filter: drop-shadow(0 0 6px rgba(163, 216, 239, .25));
+}
+.xrism-card.is-observing .xrism-mirror {
+  stroke: #f4ffff;
+  filter: drop-shadow(0 0 6px rgba(192, 246, 255, .55));
+}
+.xrism-card.is-observing .art-xray::before { opacity: 1; }
+.xrism-card.is-observing .xrism-toggle .circuit-led {
+  background: #b5f2ff;
+  box-shadow: 0 0 10px 2px rgba(135, 212, 247, .45);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .xrism-card:hover .xrism-observation { opacity: 1; }
+  .xrism-card:hover .xrism-beam { animation: xrism-beam-flow 3s linear infinite; }
+  .xrism-card:hover .xrism-source-ring { animation: xrism-soft-pulse 3s ease-in-out infinite; }
+  .xrism-card:hover .xrism-satellite {
+    transform: translateY(-3px) rotate(-.5deg);
+    filter: drop-shadow(0 0 6px rgba(163, 216, 239, .25));
+  }
+  .xrism-card:hover .xrism-mirror {
+    stroke: #f4ffff;
+    filter: drop-shadow(0 0 6px rgba(192, 246, 255, .55));
+  }
+  .xrism-card:hover .art-xray::before { opacity: 1; }
+}
+
+@keyframes xrism-beam-flow {
+  from { stroke-dashoffset: 126; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes xrism-soft-pulse {
+  0%, 100% { opacity: .25; transform: scale(.88); }
+  50% { opacity: .8; transform: scale(1.3); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xrism-card .xrism-satellite,
+  .xrism-card .xrism-observation,
+  .xrism-card .xrism-mirror,
+  .xrism-card .art-xray::before { transition: none !important; }
+  .xrism-card .xrism-beam,
+  .xrism-card .xrism-source-ring { animation: none !important; }
+  .xrism-card.is-observing .xrism-observation { opacity: 1; }
+}
