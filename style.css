@@ -119,8 +119,8 @@ h2 span { color: #80909f; }
   filter: drop-shadow(0 0 3px rgba(112,255,223,.9));
   transition: opacity .4s ease;
 }
-.satori-signals path:nth-child(2n) { animation-delay: -.65s; }
-.satori-signals path:nth-child(3n) { animation-delay: -1.15s; }
+.satori-signals path:nth-child(2n) { --flow-delay: -.65s; }
+.satori-signals path:nth-child(3n) { --flow-delay: -1.15s; }
 .satori-core, .satori-chip, .satori-core-mark {
   transition: filter .45s ease, stroke .45s ease;
 }
@@ -129,8 +129,8 @@ h2 span { color: #80909f; }
   transform-origin: center;
   opacity: .66;
 }
-.satori-nodes circle:nth-child(2n) { animation-delay: -.5s; }
-.satori-nodes circle:nth-child(3n) { animation-delay: -.9s; }
+.satori-nodes circle:nth-child(2n) { --node-delay: -.5s; }
+.satori-nodes circle:nth-child(3n) { --node-delay: -.9s; }
 .circuit-toggle {
   position: absolute;
   left: 15px;
@@ -172,6 +172,7 @@ h2 span { color: #80909f; }
 .satori-card:has(.circuit-toggle:focus-visible) .satori-signals path {
   opacity: 1;
   animation: satori-current 1.7s linear infinite;
+  animation-delay: var(--flow-delay, 0s);
 }
 .satori-card.is-energized .satori-core,
 .satori-card:has(.circuit-toggle:focus-visible) .satori-core {
@@ -186,12 +187,14 @@ h2 span { color: #80909f; }
 .satori-card:has(.circuit-toggle:focus-visible) .satori-nodes circle {
   opacity: 1;
   animation: satori-node-glow 1.8s ease-in-out infinite alternate;
+  animation-delay: var(--node-delay, 0s);
 }
 @media (hover: hover) and (pointer: fine) {
   .satori-card:hover .art-asic::after { opacity: 1; }
   .satori-card:hover .satori-signals path {
     opacity: 1;
     animation: satori-current 1.7s linear infinite;
+  animation-delay: var(--flow-delay, 0s);
   }
   .satori-card:hover .satori-core {
     stroke: #d1fff1;
@@ -201,6 +204,7 @@ h2 span { color: #80909f; }
   .satori-card:hover .satori-nodes circle {
     opacity: 1;
     animation: satori-node-glow 1.8s ease-in-out infinite alternate;
+  animation-delay: var(--node-delay, 0s);
   }
 }
 @keyframes satori-current {
