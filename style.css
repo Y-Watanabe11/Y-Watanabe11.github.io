@@ -95,6 +95,123 @@ h2 span { color: #80909f; }
 .card-content>p:not(.card-overline) { margin: 0 0 25px; color: var(--muted); font-size: 13px; line-height: 1.85; }
 .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; }
 .tags span { padding: 6px 9px; border: 1px solid #e4e9ef; border-radius: 5px; background: #f7f9fb; color: #5a6d7b; font-size: 10px; font-weight: 700; }
+
+/* Interactive SATORI circuit — works with hover, keyboard and touch. */
+.satori-card { position: relative; }
+.art-asic { isolation: isolate; }
+.art-asic::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 48%, rgba(86, 233, 211, .2), transparent 62%);
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+.satori-card .art-asic svg { pointer-events: none; }
+.satori-signals path {
+  fill: none;
+  stroke: #b2fff0;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-dasharray: 12 14;
+  opacity: 0;
+  filter: drop-shadow(0 0 3px rgba(112,255,223,.9));
+  transition: opacity .4s ease;
+}
+.satori-signals path:nth-child(2n) { animation-delay: -.65s; }
+.satori-signals path:nth-child(3n) { animation-delay: -1.15s; }
+.satori-core, .satori-chip, .satori-core-mark {
+  transition: filter .45s ease, stroke .45s ease;
+}
+.satori-nodes circle {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: .66;
+}
+.satori-nodes circle:nth-child(2n) { animation-delay: -.5s; }
+.satori-nodes circle:nth-child(3n) { animation-delay: -.9s; }
+.circuit-toggle {
+  position: absolute;
+  left: 15px;
+  top: 156px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid rgba(159, 246, 229, .35);
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: rgba(5, 26, 43, .78);
+  color: #dcfff8;
+  font: 700 10px/1 var(--display);
+  letter-spacing: .6px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.circuit-toggle:hover { transform: translateY(-2px); background: rgba(16, 64, 76, .94); }
+.circuit-toggle:focus-visible {
+  outline: 2px solid #baffef;
+  outline-offset: 3px;
+}
+.circuit-led {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #638985;
+  transition: background .3s ease, box-shadow .3s ease;
+}
+.satori-card.is-energized .circuit-led {
+  background: #9bffe5;
+  box-shadow: 0 0 10px 2px rgba(104, 255, 222, .55);
+}
+.satori-card.is-energized .art-asic::after,
+.satori-card:has(.circuit-toggle:focus-visible) .art-asic::after { opacity: 1; }
+.satori-card.is-energized .satori-signals path,
+.satori-card:has(.circuit-toggle:focus-visible) .satori-signals path {
+  opacity: 1;
+  animation: satori-current 1.7s linear infinite;
+}
+.satori-card.is-energized .satori-core,
+.satori-card:has(.circuit-toggle:focus-visible) .satori-core {
+  stroke: #d1fff1;
+  filter: drop-shadow(0 0 11px rgba(111, 251, 218, .75));
+}
+.satori-card.is-energized .satori-chip,
+.satori-card:has(.circuit-toggle:focus-visible) .satori-chip {
+  filter: drop-shadow(0 0 10px rgba(119, 255, 227, .55));
+}
+.satori-card.is-energized .satori-nodes circle,
+.satori-card:has(.circuit-toggle:focus-visible) .satori-nodes circle {
+  opacity: 1;
+  animation: satori-node-glow 1.8s ease-in-out infinite alternate;
+}
+@media (hover: hover) and (pointer: fine) {
+  .satori-card:hover .art-asic::after { opacity: 1; }
+  .satori-card:hover .satori-signals path {
+    opacity: 1;
+    animation: satori-current 1.7s linear infinite;
+  }
+  .satori-card:hover .satori-core {
+    stroke: #d1fff1;
+    filter: drop-shadow(0 0 11px rgba(111, 251, 218, .75));
+  }
+  .satori-card:hover .satori-chip { filter: drop-shadow(0 0 10px rgba(119, 255, 227, .55)); }
+  .satori-card:hover .satori-nodes circle {
+    opacity: 1;
+    animation: satori-node-glow 1.8s ease-in-out infinite alternate;
+  }
+}
+@keyframes satori-current {
+  from { stroke-dashoffset: 104; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes satori-node-glow {
+  from { transform: scale(1); filter: drop-shadow(0 0 2px #76e6d2); }
+  to { transform: scale(1.6); filter: drop-shadow(0 0 7px #b5ffed); }
+}
+
 .projects-section { padding-block: 110px 70px; scroll-margin-top: 80px; background: #101c31; color: white; position: relative; overflow: hidden; }
 .projects-section::before { content: ""; position: absolute; right: -260px; top: -430px; width: 790px; height: 790px; border: 1px solid rgba(167,199,243,.10); border-radius: 50%; box-shadow: 0 0 0 100px rgba(167,199,243,.022), 0 0 0 200px rgba(167,199,243,.015); pointer-events: none; }
 .projects-inner { position: relative; }
@@ -199,6 +316,7 @@ h2 span { color: #80909f; }
   h2 { font-size: 43px; }
   .research-card { display: block; }
   .card-art { height: 190px; min-height: 0; }
+  .circuit-toggle { top: 145px; }
   .card-content { min-height: 0; padding: 24px; }
   .card-content>p:not(.card-overline) { margin-bottom: 23px; }
   .projects-section { padding-block: 72px 52px; }
@@ -218,6 +336,10 @@ h2 span { color: #80909f; }
   .footer-inner>span:nth-child(2) { width: 100%; order: 3; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .satori-card.is-energized .satori-signals path,
+  .satori-card:has(.circuit-toggle:focus-visible) .satori-signals path { opacity: 1; }
+  .satori-card.is-energized .satori-nodes circle,
+  .satori-card:has(.circuit-toggle:focus-visible) .satori-nodes circle { opacity: 1; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
