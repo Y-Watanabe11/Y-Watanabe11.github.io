@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style-20261028.css">
+  <link rel="stylesheet" href="xrism.css">
   <title>Yuuki Watanabe — Research & Engineering</title>
 </head>
 <body>
@@ -103,8 +104,62 @@
             </button>
             <div class="card-content"><p class="card-overline">ANALOG ASIC <span>↗</span> SIPM READOUT</p><h3>SATORI</h3><p>Developing a compact, low-power custom readout integrated circuit for silicon photomultipliers, connecting circuit design with practical detector instrumentation.</p><div class="tags"><span>ASIC</span><span>SiPM</span><span>Instrumentation</span></div></div>
           </article>
-          <article class="research-card">
-            <div class="card-art art-xray" aria-hidden="true"><span class="art-label">02 / ASTROPHYSICS</span><svg viewBox="0 0 360 190" focusable="false"><g stroke="#adbadf" stroke-opacity=".19"><path d="M0 45h360M0 90h360M0 135h360M45 0v190M90 0v190M135 0v190M180 0v190M225 0v190M270 0v190M315 0v190"/></g><path d="M0 143C30 141 40 136 62 137S98 154 118 126s20-82 35-83 22 99 46 101 25-23 44-25 29 18 45 12 26-51 37-52 16 47 35 49" fill="none" stroke="#9dafff" stroke-width="2.5"/><path d="M0 143C30 141 40 136 62 137S98 154 118 126s20-82 35-83 22 99 46 101 25-23 44-25 29 18 45 12 26-51 37-52 16 47 35 49V190H0Z" fill="#8da3fa" fill-opacity=".10"/><path d="M153 20v150" stroke="#bdcaff" stroke-dasharray="4 6" stroke-opacity=".55"/><circle cx="153" cy="43" r="5" fill="#c2ccff"/></svg><span class="art-corner">X / 02</span></div>
+          <article class="research-card xrism-card">
+            <div class="card-art art-xray" aria-hidden="true">
+              <span class="art-label">02 / ASTROPHYSICS</span>
+              <svg class="xrism-illustration" viewBox="0 0 360 190" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="xrism-gold" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#fff0cb"/><stop offset=".52" stop-color="#d9b781"/><stop offset="1" stop-color="#9d8e9e"/>
+                  </linearGradient>
+                  <linearGradient id="xrism-solar" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#4b82aa"/><stop offset="1" stop-color="#1b3c64"/>
+                  </linearGradient>
+                </defs>
+                <g class="xrism-orbit" fill="none" stroke="#b8d5f7" stroke-width="1">
+                  <path d="M-22 152C72 18 249 8 393 155" opacity=".17"/>
+                  <path d="M-24 170C77 52 247 35 389 168" opacity=".10" stroke-dasharray="3 8"/>
+                </g>
+                <g fill="#b2d8ed" opacity=".75">
+                  <circle cx="45" cy="48" r="1.7"/><circle cx="92" cy="31" r="1.1"/>
+                  <circle cx="266" cy="52" r="1.2"/><circle cx="338" cy="60" r="1.4"/>
+                  <circle cx="24" cy="131" r="1.1"/><circle cx="329" cy="167" r="1.3"/>
+                  <path d="M306 23v15M298.5 30.5h15" stroke="#bfe4ff" stroke-width="1.3"/>
+                </g>
+                <g class="xrism-observation" fill="none">
+                  <path class="xrism-beam-halo" d="M306 30Q254 42 190 68"/>
+                  <path class="xrism-beam" d="M306 30Q254 42 190 68"/>
+                  <circle class="xrism-source-ring" cx="306" cy="30" r="9" stroke="#ccefff" stroke-width="1.4"/>
+                  <circle cx="306" cy="30" r="2.6" fill="#e7fcff" stroke="none"/>
+                </g>
+                <g class="xrism-satellite">
+                  <path d="M45 91L136 80L139 134L47 147Z" fill="url(#xrism-solar)" stroke="#a5c8e5" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M237 80L325 94L322 147L234 133Z" fill="url(#xrism-solar)" stroke="#a5c8e5" stroke-width="2" stroke-linejoin="round"/>
+                  <g stroke="#b8dcf3" stroke-opacity=".53" stroke-width="1">
+                    <path d="M66 88L68 143M89 85L91 140M112 83L114 137M46 108L137 99M47 128L138 119"/>
+                    <path d="M259 83L256 137M280 87L278 141M303 91L301 144M236 99L324 112M235 119L323 132"/>
+                  </g>
+                  <g stroke="#c6e1ec" stroke-width="3" stroke-linecap="round">
+                    <path d="M132 107L159 108M227 109L245 108"/>
+                  </g>
+                  <path d="M152 83L214 75L233 124L169 134Z" fill="url(#xrism-gold)" stroke="#ffe6bc" stroke-width="1.8" stroke-linejoin="round"/>
+                  <path d="M152 83L170 66L213 65L214 75Z" fill="#f5e5c0" stroke="#fff0d0" stroke-width="1.5"/>
+                  <path d="M169 134L183 118L233 124Z" fill="#aa8e7a" opacity=".7"/>
+                  <path d="M166 93L221 85M169 109L226 103M175 124L230 116" stroke="#fff2d1" stroke-opacity=".72" stroke-width="1"/>
+                  <path d="M170 67L176 52L205 52L213 65Z" fill="#c5dae6" stroke="#ecf8ff" stroke-width="1.4"/>
+                  <ellipse class="xrism-mirror" cx="191" cy="54" rx="18.5" ry="7.8" fill="#8dbad1" stroke="#d9f2fa" stroke-width="2"/>
+                  <ellipse cx="191" cy="54" rx="10" ry="4.2" fill="#1e3c5f" stroke="#98c9df" stroke-width="1"/>
+                  <path d="M208 76L219 89M217 75L230 88" stroke="#fff3d2" stroke-width="2.2" stroke-linecap="round"/>
+                  <path d="M188 51L186 39M185 39L179 35" fill="none" stroke="#d4ecf8" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="179" cy="35" r="2.5" fill="#9ce9ed"/>
+                </g>
+              </svg>
+              <span class="art-corner">X / 02</span>
+            </div>
+            <button class="circuit-toggle xrism-toggle" type="button" aria-pressed="false" aria-label="Start XRISM observation animation">
+              <span class="circuit-led" aria-hidden="true"></span>
+              <span class="xrism-toggle-text" aria-hidden="true">Observe</span>
+            </button>
             <div class="card-content"><p class="card-overline">X-RAY ASTRONOMY <span>↗</span> SPECTROSCOPY</p><h3>XRISM</h3><p>Working with high-resolution X-ray spectroscopy and reproducible analysis workflows to investigate energetic processes in astrophysical sources.</p><div class="tags"><span>XRISM</span><span>Python</span><span>Spectroscopy</span></div></div>
           </article>
           <article class="research-card">
@@ -145,6 +200,21 @@
           : 'Activate SATORI circuit animation');
         circuitButton.querySelector('.circuit-toggle-text').textContent =
           powered ? 'Power off' : 'Power on';
+      });
+    }
+
+    // A gentle observation-beam toggle for touch and keyboard users.
+    const xrismCard = document.querySelector('.xrism-card');
+    const xrismButton = document.querySelector('.xrism-toggle');
+    if (xrismCard && xrismButton) {
+      xrismButton.addEventListener('click', () => {
+        const observing = xrismCard.classList.toggle('is-observing');
+        xrismButton.setAttribute('aria-pressed', String(observing));
+        xrismButton.setAttribute('aria-label', observing
+          ? 'Stop XRISM observation animation'
+          : 'Start XRISM observation animation');
+        xrismButton.querySelector('.xrism-toggle-text').textContent =
+          observing ? 'Pause scan' : 'Observe';
       });
     }
   </script>
