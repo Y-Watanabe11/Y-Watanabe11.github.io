@@ -12,15 +12,18 @@
   <link rel="canonical" href="https://y-watanabe11.github.io/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style-20261028.css">
   <link rel="stylesheet" href="xrism.css">
   <link rel="stylesheet" href="lunar.css">
   <link rel="stylesheet" href="research-links.css">
+  <link rel="stylesheet" href="motion-20261102.css">
+  <script src="motion-20261102.js" defer></script>
   <title>Yuuki Watanabe — Research & Engineering</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="motion-progress" aria-hidden="true"></div>
   <header class="site-header">
     <div class="container nav-inner">
       <a class="brand" href="#home" aria-label="Yuuki Watanabe — Home"><span class="brand-mark" aria-hidden="true">YW<span>·</span></span><span class="brand-name">Yuuki Watanabe</span></a>
@@ -36,6 +39,7 @@
   <main id="main">
     <section id="home" class="hero">
       <div class="hero-grid" aria-hidden="true"></div>
+      <div class="motion-stars" aria-hidden="true"><i style="--star-x:9%;--star-y:12%;--star-size:2.5px;--star-delay:-2s"></i><i style="--star-x:22%;--star-y:63%;--star-size:2px;--star-delay:0s"></i><i style="--star-x:43%;--star-y:19%;--star-size:2px;--star-delay:-1.5s"></i><i style="--star-x:57%;--star-y:78%;--star-size:2.5px;--star-delay:-4s"></i><i style="--star-x:68%;--star-y:11%;--star-size:3px;--star-delay:-3s"></i><i style="--star-x:78%;--star-y:63%;--star-size:2px;--star-delay:-2.5s"></i><i style="--star-x:89%;--star-y:27%;--star-size:2.5px;--star-delay:-5s"></i><i style="--star-x:95%;--star-y:85%;--star-size:2px;--star-delay:-4.5s"></i></div>
       <div class="container hero-inner">
         <div class="hero-content">
           <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> RESEARCH / ENGINEERING / EXPLORATION</div>
@@ -45,6 +49,7 @@
             <a class="button button-primary" href="#research">Explore my research <span aria-hidden="true">↗</span></a>
             <a class="button button-outline" href="https://github.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
           </div>
+          <div class="motion-hint" aria-hidden="true"><span class="motion-hint-line"></span> INTERACTIVE FIELD NOTES <span class="motion-hint-index">01 — 03</span></div>
         </div>
         <div class="visual-panel" aria-label="Abstract illustration of orbital paths and detector signals" role="img">
           <div class="visual-top"><span>FIELD NOTES / 001</span><span class="visual-sparkle" aria-hidden="true">✳</span></div>
@@ -54,6 +59,14 @@
               <linearGradient id="core-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b1fff0"/><stop offset="1" stop-color="#5281cb"/></linearGradient>
               <linearGradient id="orbit-gradient"><stop offset="0" stop-color="#8debdc" stop-opacity=".08"/><stop offset=".45" stop-color="#8debdc" stop-opacity=".92"/><stop offset="1" stop-color="#8debdc" stop-opacity=".1"/></linearGradient>
             </defs>
+            <g class="motion-orbit-outer" fill="none">
+              <ellipse cx="270" cy="270" rx="233" ry="123" transform="rotate(-29 270 270)" stroke="#a5f5e2" stroke-opacity=".22" stroke-width="1.5" stroke-dasharray="3 16"/>
+              <circle class="motion-orbit-signal" cx="466" cy="144" r="3.6" fill="#adffef"/>
+            </g>
+            <g class="motion-orbit-inner" fill="none">
+              <ellipse cx="270" cy="270" rx="141" ry="198" transform="rotate(34 270 270)" stroke="#aecbff" stroke-opacity=".27" stroke-width="1.2" stroke-dasharray="4 12"/>
+              <circle cx="194" cy="90" r="2.8" fill="#bfd6ff" opacity=".75"/>
+            </g>
             <g stroke="#b5d2f7" stroke-opacity=".10" fill="none"><circle cx="270" cy="270" r="224"/><circle cx="270" cy="270" r="168"/><circle cx="270" cy="270" r="108"/><path d="M270 22v496M22 270h496"/><path d="M95 95l350 350M445 95L95 445" stroke-dasharray="3 9"/></g>
             <circle cx="270" cy="270" r="184" fill="url(#core-glow)"/>
             <g fill="none" transform="rotate(-29 270 270)"><ellipse cx="270" cy="270" rx="220" ry="93" stroke="url(#orbit-gradient)" stroke-width="1.8"/><ellipse cx="270" cy="270" rx="122" ry="222" stroke="#93bbeb" stroke-opacity=".5" stroke-width="1.1" stroke-dasharray="5 8"/></g>
