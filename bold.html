@@ -14,7 +14,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="bold.css">
+  <link rel="stylesheet" href="bold-enhance.css">
   <script src="bold.js" defer></script>
+  <script src="bold-enhance.js" defer></script>
   <title>Yuuki Watanabe — Experimental Research Portfolio</title>
 </head>
 <body>
@@ -44,6 +46,7 @@
       <div class="hero-main container-wide">
         <div class="hero-copy">
           <p class="overline"><span class="overline-dot"></span> INDEPENDENT THINKING / REAL INSTRUMENTS / 2026</p>
+          <div class="hero-system-line" aria-hidden="true"><span>OBSERVE</span><i></i><span>DESIGN</span><i></i><span>DECODE</span><span class="hero-system-id">° 00—01</span></div>
           <h1 id="hero-title"><span>THE</span><span class="outlined">INVISIBLE</span><span>IS NOT</span><span class="hero-last"><em>UNKNOWABLE.</em></span></h1>
           <p class="hero-intro">I design ways to turn the unseen into something measurable — from silicon circuits to cosmic X-rays.</p>
           <div class="hero-cta">
@@ -52,7 +55,9 @@
           </div>
         </div>
         <div class="hero-visual-wrap">
-          <div class="hero-visual" role="img" aria-label="Abstract interactive scientific instrument surrounded by elliptical orbits, particle signals and measurement rings">
+          <div class="hero-visual" role="img" aria-label="Abstract scientific instrument surrounded by elliptical orbits, particle signals and measurement rings">
+            <span class="hero-scan-band" aria-hidden="true"></span>
+            <span class="hero-coordinates" aria-hidden="true">α 27.6° / δ +38.1°</span>
             <span class="visual-topline"><span>FIELD / 001</span><span class="visual-dot"></span><span>LIVE OBSERVATION</span></span>
             <svg viewBox="0 0 560 620" class="hero-art" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <defs>
@@ -136,7 +141,7 @@
             <div class="work-maincopy"><span class="work-index">PROJECT 001</span><h3>SATORI<span class="title-period">.</span></h3><p>At the boundary of photons and silicon: developing compact custom analog readout electronics for SiPM detectors.</p>
               <div class="work-tags"><span>ANALOG ASIC</span><span>SiPM</span><span>READOUT</span></div>
             </div>
-            <a class="work-link" href="research/satori.html"><span>ENTER PROJECT</span><span class="round-arrow" aria-hidden="true">↗</span></a>
+            <a class="work-link" href="research/satori-bold.html"><span>ENTER PROJECT</span><span class="round-arrow" aria-hidden="true">↗</span></a>
           </div>
           <div class="case-visual case-visual-satori" role="img" aria-label="Illustrated integrated circuit with glowing signal paths">
             <svg viewBox="0 0 600 470" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -151,6 +156,13 @@
               <g fill="#d8ffcc" font-family="monospace" letter-spacing="2" font-size="12"><text x="42" y="69">INPUT</text><text x="479" y="69">OUTPUT</text><text x="248" y="382">ANALOG / IC</text></g>
             </svg>
             <span class="visual-caption">FIG 01 / DETECTOR FRONT END</span><span class="corner-mark">S—01</span>
+            <div class="case-instrument-panel" aria-label="Interactive satori visualization">
+              <button type="button" class="case-activate" data-case-control="satori" aria-pressed="false" aria-label="activate signal">
+                <span class="case-control-icon" aria-hidden="true">↗</span>
+                <span class="case-control-title">ACTIVATE SIGNAL</span>
+              </button>
+              <span class="case-mode" role="status" aria-live="polite">SIGNAL PATH / IDLE</span>
+            </div>
           </div>
         </article>
 
@@ -160,7 +172,7 @@
             <div class="work-maincopy"><span class="work-index">PROJECT 002</span><h3>XRISM<span class="title-period">.</span></h3><p>Reading extreme cosmic environments through high-resolution X-ray spectroscopy and reproducible analysis.</p>
               <div class="work-tags"><span>X-RAY ASTRONOMY</span><span>SPECTROSCOPY</span><span>PYTHON</span></div>
             </div>
-            <a class="work-link" href="research/xrism.html"><span>ENTER PROJECT</span><span class="round-arrow" aria-hidden="true">↗</span></a>
+            <a class="work-link" href="research/xrism-bold.html"><span>ENTER PROJECT</span><span class="round-arrow" aria-hidden="true">↗</span></a>
           </div>
           <div class="case-visual case-visual-xrism" role="img" aria-label="Abstract X-ray observation satellite with blue solar panels and orbit arcs">
             <svg viewBox="0 0 600 470" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -182,6 +194,13 @@
               <circle cx="447" cy="40" r="7" fill="#e5f5ff"/><circle class="xrism-signal-ring" cx="447" cy="40" r="21" fill="none" stroke="#daeaff" stroke-width="2"/>
             </svg>
             <span class="visual-caption">FIG 02 / X-RAY OBSERVATORY</span><span class="corner-mark">X—02</span>
+            <div class="case-instrument-panel" aria-label="Interactive xrism visualization">
+              <button type="button" class="case-activate" data-case-control="xrism" aria-pressed="false" aria-label="scan x-rays">
+                <span class="case-control-icon" aria-hidden="true">↗</span>
+                <span class="case-control-title">SCAN X-RAYS</span>
+              </button>
+              <span class="case-mode" role="status" aria-live="polite">SCAN MODE / IDLE</span>
+            </div>
           </div>
         </article>
 
@@ -191,7 +210,7 @@
             <div class="work-maincopy"><span class="work-index">PROJECT 003</span><h3>LUNAR—<br>RICHES<span class="title-period">.</span></h3><p>Exploring charged-particle detection and silicon tracking for measurements beyond Earth.</p>
               <div class="work-tags"><span>DSSD</span><span>PARTICLE PHYSICS</span><span>LUNAR SCIENCE</span></div>
             </div>
-            <a class="work-link" href="research/lunar-riches.html"><span>ENTER PROJECT</span><span class="round-arrow" aria-hidden="true">↗</span></a>
+            <a class="work-link" href="research/lunar-riches-bold.html"><span>ENTER PROJECT</span><span class="round-arrow" aria-hidden="true">↗</span></a>
           </div>
           <div class="case-visual case-visual-lunar" role="img" aria-label="Rose-tinted moon, glowing particle trajectories and a silicon detector">
             <svg viewBox="0 0 600 470" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -208,6 +227,13 @@
               <g transform="translate(472 277)"><path d="M0 0L35-12V98L0 110Z" fill="#45536f" stroke="#d1e4ef" stroke-width="2.5"/><path d="M19-6L54-19V91L19 103Z" fill="#71829e" stroke="#ffe1ce" stroke-width="2.5"/><path d="M31-11V99M43-15V94M19 31L54 18M19 64L54 51" stroke="#fce2d7" stroke-width="1.7" opacity=".65"/><circle class="detector-ring" cx="35" cy="42" r="12" fill="none" stroke="#c7ffe9" stroke-width="2"/><circle cx="35" cy="42" r="4" fill="#d6ffee"/></g>
             </svg>
             <span class="visual-caption">FIG 03 / PARTICLE TRACKING</span><span class="corner-mark">L—03</span>
+            <div class="case-instrument-panel" aria-label="Interactive lunar-riches visualization">
+              <button type="button" class="case-activate" data-case-control="lunar" aria-pressed="false" aria-label="trace particles">
+                <span class="case-control-icon" aria-hidden="true">↗</span>
+                <span class="case-control-title">TRACE PARTICLES</span>
+              </button>
+              <span class="case-mode" role="status" aria-live="polite">TRACK MODE / IDLE</span>
+            </div>
           </div>
         </article>
       </div>
