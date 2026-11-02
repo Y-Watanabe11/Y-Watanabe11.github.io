@@ -281,7 +281,8 @@ h1,h2,h3,p { margin-top: 0; }
 .motion-off .signal-lines,.motion-off .xrism-orbit-art,.motion-off .xray-beam,.motion-off .xrism-signal-ring,
 .motion-off .particle-beam,.motion-off .detector-ring {animation-play-state:paused!important}
 .motion-off .hero-art{transition:none!important}
-.motion-off .has-motion [data-reveal].reveal-ready {opacity:1!important;transform:none!important}
+.has-motion.motion-off [data-reveal].reveal-ready {opacity:1!important;transform:none!important}
+.has-motion .work-case.reveal-ready.is-visible:hover {transform:translateY(-5px)}
 
 @media(min-width:1300px){
   .hero-copy{margin-right:-95px}
