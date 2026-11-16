@@ -18,7 +18,10 @@
   <link rel="stylesheet" href="lunar.css">
   <link rel="stylesheet" href="research-links.css">
   <link rel="stylesheet" href="motion-20261102.css">
+  <link rel="stylesheet" href="lab-20261116.css">
   <script src="motion-20261102.js" defer></script>
+  <script src="lab-20261116.js" defer></script>
+  <script src="console-20261116.js" defer></script>
   <title>Yuuki Watanabe — Research & Engineering</title>
 </head>
 <body>
@@ -30,6 +33,7 @@
       <nav class="primary-nav" aria-label="Primary navigation">
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
+        <a href="#lab">Lab</a>
         <a href="#about">About</a>
         <a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
       </nav>
@@ -254,7 +258,46 @@
 
     <section id="about" class="section about-section"><div class="container about-grid"><div class="about-lead"><p class="section-kicker"><span>03</span> / ABOUT ME</p><h2>Between the<br><em>observable</em> and<br>the possible.</h2><div class="about-decoration" aria-hidden="true"><span>✳</span><span>SPACE / SILICON / SCIENCE</span></div></div><div class="about-copy"><p class="about-opening">I work at the intersection of physics and engineering.</p><p>I am a master's student in the Graduate School of Science and Technology at Tokyo University of Science. I am interested in developing instruments that make new observations possible, and in using careful data analysis to learn from those observations.</p><p>My interests span radiation detectors, analog and mixed-signal electronics, spacecraft instrumentation, high-energy astrophysics, and scientific software.</p><div class="affiliation-card"><span>NOW / CURRENT AFFILIATION</span><strong>Tokyo University of Science</strong><small>Graduate Student · Japan</small></div></div></div></section>
 
-    <section id="contact" class="contact-section"><div class="container"><div class="contact-panel"><div class="contact-top"><p class="section-kicker"><span>04</span> / SAY HELLO</p><span class="contact-star" aria-hidden="true">✳</span></div><h2>Let's make something<br><em>meaningful.</em></h2><p>Interested in my research or working together? Find my work and writing below.</p><div class="social-links"><a href="https://github.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/yuuki-watanabe-51b71733a/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://medium.com/@watanabe42463" target="_blank" rel="noopener noreferrer">Medium <span aria-hidden="true">↗</span></a><a href="https://qiita.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer">Qiita <span aria-hidden="true">↗</span></a><a href="https://note.com/y_watanabe_11" target="_blank" rel="noopener noreferrer">note <span aria-hidden="true">↗</span></a></div></div></div></section>
+    <section id="lab" class="lab-section" aria-labelledby="lab-title">
+      <div class="container">
+        <div class="section-heading section-heading-dark"><div><p class="section-kicker"><span>04</span> / THE LAB</p><h2 id="lab-title">Catch a <span>photon.</span></h2></div><p class="section-intro">A 30-second toy observation. Steer the detector, collect X-ray photons from a hot galaxy cluster, and watch an iron emission line rise out of the noise.</p></div>
+        <div class="lab-board">
+          <div class="lab-stage">
+            <canvas class="lab-canvas" id="lab-canvas" tabindex="0" aria-label="Observation field. Move the detector with the pointer, or with the left and right arrow keys." aria-describedby="lab-howto"></canvas>
+            <div class="lab-hud" aria-hidden="true"><span>EXPOSURE <strong data-lab="time">30.0</strong> s</span><span class="lab-hud-dead">DEAD TIME · COSMIC RAY HIT</span><span>CR HITS <strong data-lab="cr">0</strong></span></div>
+            <div class="lab-overlay">
+              <p class="lab-overlay-kicker">OBSERVATION PROPOSAL / 001</p>
+              <p class="lab-overlay-tier" hidden></p>
+              <p class="lab-overlay-title">Point the telescope. Catch the light.</p>
+              <p class="lab-overlay-text" id="lab-howto">Move the detector under the falling X-ray photons. Each catch is binned by energy. Dodge the orange cosmic rays: they add noise and blind the detector for a moment.</p>
+              <div class="lab-keys" aria-hidden="true"><span><kbd>←</kbd><kbd>→</kbd> or pointer</span><span><kbd>Space</kbd> start</span></div>
+              <noscript><p class="lab-nojs">The interactive observation needs JavaScript.</p></noscript>
+              <button class="lab-start" type="button">Start observation <span aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+          <aside class="lab-readout" aria-label="Detector readout">
+            <div class="lab-panel-head"><span>ENERGY SPECTRUM / COUNTS</span><span>Fe Kα · 6.40 keV</span></div>
+            <div class="lab-spectrum-block">
+              <div class="lab-spectrum-wrap"><canvas class="lab-spectrum" id="lab-spectrum" aria-hidden="true"></canvas></div>
+              <div class="lab-axis" aria-hidden="true"><span>2</span><span>4</span><span>6</span><span>8</span><span>10 keV</span></div>
+            </div>
+            <dl class="lab-stats">
+              <div><dt>PHOTONS</dt><dd data-lab="photons">0</dd></div>
+              <div><dt>LINE</dt><dd data-lab="sigma">0.0σ</dd></div>
+              <div><dt>BEST</dt><dd data-lab="best">—</dd></div>
+            </dl>
+            <div class="lab-signal">
+              <div class="lab-meter-caption"><span>LINE SIGNIFICANCE</span><span>DISCOVERY</span></div>
+              <div class="lab-meter" aria-hidden="true"><span class="lab-meter-fill"></span><i style="left:50%" data-label="3σ"></i><i style="left:83.33%" data-label="5σ"></i></div>
+              <p class="lab-log" aria-live="polite">Waiting for telescope time…</p>
+            </div>
+          </aside>
+        </div>
+        <p class="lab-footnote"><span>A TOY MODEL · REAL SPECTROMETERS ARE MUCH MORE PATIENT</span><span>PSST — PRESS <kbd>`</kbd> FOR THE LAB CONSOLE</span></p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section"><div class="container"><div class="contact-panel"><div class="contact-top"><p class="section-kicker"><span>05</span> / SAY HELLO</p><span class="contact-star" aria-hidden="true">✳</span></div><h2>Let's make something<br><em>meaningful.</em></h2><p>Interested in my research or working together? Find my work and writing below.</p><div class="social-links"><a href="https://github.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/yuuki-watanabe-51b71733a/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://medium.com/@watanabe42463" target="_blank" rel="noopener noreferrer">Medium <span aria-hidden="true">↗</span></a><a href="https://qiita.com/Y-Watanabe11" target="_blank" rel="noopener noreferrer">Qiita <span aria-hidden="true">↗</span></a><a href="https://note.com/y_watanabe_11" target="_blank" rel="noopener noreferrer">note <span aria-hidden="true">↗</span></a></div></div></div></section>
   </main>
   <footer class="footer"><div class="container footer-inner"><span>© <span id="year">2026</span> Yuuki Watanabe</span><span>Exploring ideas, building instruments.</span><a href="#home">Back to top ↑</a></div></footer>
   <script>
